@@ -88,19 +88,20 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .layer1 {
     background-image: url('dominos 2.svg');
     z-index: -2;
-    transform: translateZ(-1px) scale(2);
+    background-attachment: fixed;
 }
 
 .layer2 {
     background-image: url('image33.jpg');
     z-index: -1;
     opacity: 0.5;
-    transform: translateZ(0px) scale(1.5);
+    background-attachment: scroll;
 }
 
 .hero-content {
@@ -172,7 +173,7 @@ body {
     padding: 100px 20px;
     background-color: var(--background-color);
     color: var(--text-color);
-    background-image: url('geometric-pattern.png'); /* Γεωμετρικό σχέδιο στο φόντο */
+    background-image: url('geometric-pattern.png');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -217,7 +218,7 @@ body {
 .projects-section {
     padding: 100px 20px;
     background-color: var(--secondary-color);
-    background-image: url('geometric-pattern.png'); /* Γεωμετρικό σχέδιο στο φόντο */
+    background-image: url('geometric-pattern.png');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -394,7 +395,6 @@ footer p {
         display: flex;
     }
 }
-
 
 
 
