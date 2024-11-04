@@ -8,13 +8,60 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: #333;
-    background-color: #ffffff; /* Αρχικό φόντο */
+    background: #ffffff; /* Αρχικό φόντο */
     transition: background 0.5s ease; /* Ομαλή μετάβαση του φόντου */
 }
 
-/* Φόντο μετά την κύλιση */
+/* Απαλό Gradient Background μετά την κύλιση */
 body.scrolled {
-    background: linear-gradient(135deg, #0073e6, #8a2be2); /* Gradient με μπλε και μωβ */
+    background: linear-gradient(180deg, #ffffff 20%, rgba(0, 115, 230, 0.6) 80%, rgba(138, 43, 226, 0.8));
+}
+
+/* Sticky Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 115, 230, 0.7);
+    backdrop-filter: blur(10px); /* Εφέ θολώματος για πιο μοντέρνα εμφάνιση */
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Αλλαγή του background της Navbar με κύλιση */
+body.scrolled .navbar {
+    background-color: rgba(0, 115, 230, 0.9);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #cce7ff; /* Απαλό χρώμα στο hover */
 }
 
 /* Hero Section */
@@ -24,7 +71,7 @@ body.scrolled {
     align-items: center;
     justify-content: center;
     padding: 150px 20px;
-    background-image: url('image22.jpg'); /* Χρήση της εικόνας image22 ως φόντο */
+    background-image: url('image22.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -39,20 +86,18 @@ body.scrolled {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay για καλύτερη αναγνωσιμότητα του κειμένου */
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
 
 .hero-text h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    color: #fff;
 }
 
 .hero-text p {
     font-size: 20px;
     margin-bottom: 30px;
-    color: #ddd;
 }
 
 .hero-text .btn {
@@ -71,11 +116,6 @@ body.scrolled {
 .about-section {
     padding: 80px 20px;
     text-align: center;
-}
-
-.about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 .about-content {
