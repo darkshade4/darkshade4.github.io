@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darkshade4 - Modern Portfolio</title>
+    <title>Darkshade4 - Καινοτόμο Portfolio</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <!-- Αρχείο CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,37 +22,34 @@
                 <li><a href="#contact">Επικοινωνία</a></li>
             </ul>
             <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section with image22 as background -->
     <section id="home" class="hero-section">
+        <div class="overlay"></div>
         <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Καλωσήρθατε, είμαι ο Darkshade4</h1>
-                <p>Προγραμματιστής με πάθος για τη δημιουργία μοντέρνων και λειτουργικών εφαρμογών.</p>
-                <a href="#projects" class="btn">Δείτε τα Projects μου</a>
-            </div>
+            <h1>Καλωσήρθατε, είμαι ο Darkshade4</h1>
+            <p>Δημιουργώ καινοτόμες λύσεις μέσω κώδικα.</p>
+            <a href="#projects" class="btn">Εξερευνήστε τα Projects μου</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="container">
-            <h2>Σχετικά με Εμένα</h2>
-            <div class="about-content">
-                <!-- Φωτογραφία Προφίλ -->
-                <div class="about-image">
-                    <img src="1708434454648.jpeg" alt="Φωτογραφία προφίλ του Darkshade4">
-                </div>
-                <!-- Κείμενο Σχετικά με Εμένα -->
-                <div class="about-text">
-                    <p>Είμαι προγραμματιστής με εμπειρία σε διάφορες τεχνολογίες και γλώσσες προγραμματισμού. Αγαπώ να δημιουργώ εφαρμογές που λύνουν προβλήματα και βελτιώνουν τη ζωή των ανθρώπων.</p>
-                </div>
+        <div class="container about-container">
+            <!-- Φωτογραφία Προφίλ -->
+            <div class="about-image">
+                <img src="1708434454648.jpeg" alt="Φωτογραφία προφίλ του Darkshade4">
+            </div>
+            <!-- Κείμενο Σχετικά με Εμένα -->
+            <div class="about-text">
+                <h2>Σχετικά με Εμένα</h2>
+                <p>Είμαι προγραμματιστής με πάθος για τη δημιουργία μοντέρνων και λειτουργικών εφαρμογών που κάνουν τη διαφορά.</p>
             </div>
         </div>
     </section>
@@ -64,15 +61,14 @@
             <div class="projects-grid">
                 <!-- Project Card -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="project1.jpg" alt="Project 1">
-                    </div>
+                    <img src="project1.jpg" alt="Project 1">
                     <div class="project-info">
                         <h3>Project 1: Εφαρμογή Καιρού</h3>
-                        <p>Μια εφαρμογή που παρέχει ενημέρωση για τον καιρό σε πραγματικό χρόνο.</p>
+                        <p>Παρέχει ενημέρωση για τον καιρό σε πραγματικό χρόνο.</p>
                         <a href="project1.zip" download class="btn">Λήψη Κώδικα</a>
                     </div>
                 </div>
+                <!-- Πρόσθεσε περισσότερα projects όπως χρειάζεται -->
             </div>
         </div>
     </section>
@@ -81,10 +77,11 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Επικοινωνία</h2>
-            <p>Θα χαρώ να επικοινωνήσετε μαζί μου για οποιοδήποτε project ή συνεργασία.</p>
+            <p>Ας συζητήσουμε για τα επόμενα project σας.</p>
             <div class="contact-links">
                 <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email</a>
                 <a href="https://github.com/darkshade4" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <!-- Πρόσθεσε άλλα κοινωνικά δίκτυα -->
             </div>
         </div>
     </section>
@@ -96,7 +93,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript για το burger menu και το scroll effect -->
+    <!-- JavaScript για το burger menu -->
     <script src="script.js"></script>
 </body>
 </html>
