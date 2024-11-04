@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darkshade4 - Modern Portfolio</title>
-    <!-- Link στο CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome για εικονίδια -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Αρχείο CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -24,24 +22,20 @@
                 <li><a href="#contact">Επικοινωνία</a></li>
             </ul>
             <div class="burger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
+        <div class="overlay"></div>
         <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Καλωσήρθατε, είμαι ο Darkshade4</h1>
-                <p>Προγραμματιστής με πάθος για τη δημιουργία μοντέρνων και λειτουργικών εφαρμογών.</p>
-                <a href="#projects" class="btn">Δείτε τα Projects μου</a>
-            </div>
-            <div class="hero-image">
-                <img src="1708434454648.jpeg" alt="Η φωτογραφία μου">
-            </div>
+            <h1>Καλωσήρθατε, είμαι ο <span>Darkshade4</span></h1>
+            <p>Προγραμματιστής με πάθος για τη δημιουργία μοντέρνων και λειτουργικών εφαρμογών.</p>
+            <a href="#projects" class="btn">Δείτε τα Projects μου</a>
         </div>
     </section>
 
@@ -49,7 +43,7 @@
     <section id="about" class="about-section">
         <div class="container">
             <h2>Σχετικά με Εμένα</h2>
-            <p>Εδώ μπορείς να γράψεις λίγα λόγια για τον εαυτό σου, τις δεξιότητες και την εμπειρία σου.</p>
+            <p>Είμαι προγραμματιστής με εμπειρία σε διάφορες τεχνολογίες και γλώσσες προγραμματισμού. Αγαπώ να δημιουργώ εφαρμογές που λύνουν προβλήματα και βελτιώνουν τη ζωή των ανθρώπων.</p>
         </div>
     </section>
 
@@ -60,10 +54,14 @@
             <div class="projects-grid">
                 <!-- Project Card -->
                 <div class="project-card">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project 1: Τίτλος Project</h3>
-                    <p>Σύντομη περιγραφή του project.</p>
-                    <a href="project1.zip" download class="btn">Λήψη Κώδικα</a>
+                    <div class="project-image">
+                        <img src="project1.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project 1: Εφαρμογή Καιρού</h3>
+                        <p>Μια εφαρμογή που παρέχει ενημέρωση για τον καιρό σε πραγματικό χρόνο.</p>
+                        <a href="project1.zip" download class="btn">Λήψη Κώδικα</a>
+                    </div>
                 </div>
                 <!-- Πρόσθεσε περισσότερα projects -->
             </div>
@@ -76,8 +74,8 @@
             <h2>Επικοινωνία</h2>
             <p>Θα χαρώ να επικοινωνήσετε μαζί μου για οποιοδήποτε project ή συνεργασία.</p>
             <div class="contact-links">
-                <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/darkshade4" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com/darkshade4" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <!-- Πρόσθεσε άλλα κοινωνικά δίκτυα -->
             </div>
         </div>
@@ -94,4 +92,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
