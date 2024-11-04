@@ -91,7 +91,7 @@ body {
 }
 
 .layer1 {
-    background-image: url('image0_0.jpg');
+    background-image: url('dominos 2.svg');
     z-index: -2;
     transform: translateZ(-1px) scale(2);
 }
