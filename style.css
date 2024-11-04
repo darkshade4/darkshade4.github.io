@@ -1,0 +1,60 @@
+/* Βασικές Ρυθμίσεις Στυλ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+/* Στυλ για το Κεντρικό Container */
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Στυλ για τη Φωτογραφία Προφίλ */
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Στυλ για τα Projects */
+.projects h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.project {
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.project a {
+    font-size: 16px;
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
