@@ -304,3 +304,21 @@ footer {
 .burger.toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    background-image: url('image22.jpg'); /* Βεβαιώσου ότι το όνομα και η επέκταση είναι σωστά */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Για εφέ parallax */
+    color: #fff;
+    text-align: center;
+}
+
