@@ -1,59 +1,41 @@
-/* Βασικές Ρυθμίσεις Στυλ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Η σελίδα του Darkshade4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f3f4f6;
-}
+    <div class="container">
+        <!-- Φωτογραφία Προφίλ -->
+        <div class="profile-image">
+            <img src="path_to_your_photo.jpg" alt="Η φωτογραφία μου">
+        </div>
 
-/* Στυλ για το Κεντρικό Container */
-.container {
-    text-align: center;
-    max-width: 600px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        <!-- Τίτλοι Προτζεκτ και Κουμπιά Λήψης -->
+        <div class="projects">
+            <h2>Τα Προτζεκτ μου</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <a href="link_to_project1_code.zip" download>Λήψη Κώδικα</a>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <a href="link_to_project2_code.zip" download>Λήψη Κώδικα</a>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <a href="link_to_project3_code.zip" download>Λήψη Κώδικα</a>
+            </div>
+            <!-- Πρόσθεσε κι άλλα project αν χρειάζεται -->
+        </div>
+    </div>
 
-/* Στυλ για τη Φωτογραφία Προφίλ */
-.profile-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
+</body>
+</html>
 
-/* Στυλ για τα Projects */
-.projects h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-}
-
-.project {
-    margin-bottom: 15px;
-}
-
-.project h3 {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.project a {
-    font-size: 16px;
-    color: #0073e6;
-    text-decoration: none;
-}
 
 .project a:hover {
     text-decoration: underline;
