@@ -1,19 +1,19 @@
-/* Χρήση Google Font */
+/* Χρήση Google Fonts */
 body {
-    font-family: 'Staatliches', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    color: #333;
-    overflow-x: hidden;
+    color: #fff;
     background-color: #1a1a1a;
+    overflow-x: hidden;
 }
 
 /* Χρώματα */
 :root {
-    --primary-color: #2e8b57; /* Στρατιωτικό πράσινο */
-    --secondary-color: #556b2f;
-    --background-color: #1a1a1a;
-    --text-color: #f0f0f0;
-    --white: #ffffff;
+    --primary-color: #4b5320; /* Χακί χρώμα */
+    --secondary-color: #000000; /* Μαύρο χρώμα */
+    --accent-color: #c0c0c0; /* Γκρι για αντιθέσεις */
+    --background-color: #1a1a1a; /* Σκούρο φόντο */
+    --text-color: #fff;
 }
 
 /* Navbar */
@@ -21,8 +21,9 @@ body {
     position: fixed;
     width: 100%;
     padding: 20px 0;
-    background: rgba(26, 26, 26, 0.9);
+    background: var(--secondary-color);
     z-index: 1000;
+    transition: background 0.3s;
 }
 
 .navbar .container {
@@ -32,6 +33,7 @@ body {
 }
 
 .navbar .logo {
+    font-family: 'Oswald', sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: var(--primary-color);
@@ -51,11 +53,11 @@ body {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
-    transition: color 0.3s;
+    font-family: 'Oswald', sans-serif;
 }
 
 .navbar .nav-links a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 /* Burger Menu */
@@ -97,7 +99,7 @@ body {
 .layer2 {
     background-image: url('image33.jpg');
     z-index: -1;
-    opacity: 0.7;
+    opacity: 0.5;
     transform: translateZ(0px) scale(1.5);
 }
 
@@ -108,11 +110,15 @@ body {
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content h1 {
     font-size: 60px;
     margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     animation: fadeInDown 1s ease-out;
 }
 
@@ -124,16 +130,18 @@ body {
 
 .hero-content .btn {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--text-color);
     padding: 15px 30px;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 5px;
     font-weight: 500;
     transition: background 0.3s, color 0.3s;
+    border: 2px solid var(--accent-color);
 }
 
 .hero-content .btn:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 /* Animations */
@@ -163,6 +171,10 @@ body {
 .about-section {
     padding: 100px 20px;
     background-color: var(--background-color);
+    color: var(--text-color);
+    background-image: url('geometric-pattern.png'); /* Γεωμετρικό σχέδιο στο φόντο */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .about-container {
@@ -178,36 +190,45 @@ body {
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .about-text {
     max-width: 600px;
-    color: var(--text-color);
 }
 
 .about-text h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: var(--accent-color);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .about-text p {
     font-size: 18px;
     line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Projects Section */
 .projects-section {
     padding: 100px 20px;
-    background-color: var(--background-color);
+    background-color: var(--secondary-color);
+    background-image: url('geometric-pattern.png'); /* Γεωμετρικό σχέδιο στο φόντο */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .projects-section h2 {
     text-align: center;
     font-size: 36px;
     margin-bottom: 50px;
-    color: var(--primary-color);
+    color: var(--accent-color);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
 }
 
 .projects-grid {
@@ -217,11 +238,12 @@ body {
 }
 
 .project-card {
-    background-color: #2e2e2e;
+    background-color: var(--background-color);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s;
+    border: 2px solid var(--primary-color);
 }
 
 .project-card:hover {
@@ -242,7 +264,8 @@ body {
 .project-info h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: var(--primary-color);
+    color: var(--accent-color);
+    font-family: 'Oswald', sans-serif;
 }
 
 .project-info p {
@@ -253,36 +276,40 @@ body {
 
 .project-info .btn {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--text-color);
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 5px;
     font-weight: 500;
     transition: background 0.3s;
+    border: 2px solid var(--accent-color);
 }
 
 .project-info .btn:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 /* Contact Section */
 .contact-section {
     padding: 100px 20px;
     background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .contact-section h2 {
     text-align: center;
     font-size: 36px;
     margin-bottom: 30px;
-    color: var(--primary-color);
+    color: var(--accent-color);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
 }
 
 .contact-section p {
     text-align: center;
     font-size: 18px;
     margin-bottom: 40px;
-    color: var(--text-color);
 }
 
 .contact-links {
@@ -293,27 +320,30 @@ body {
 
 .contact-links a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--text-color);
     background-color: var(--primary-color);
     padding: 15px 20px;
-    border-radius: 50px;
+    border-radius: 5px;
     font-size: 18px;
     transition: background 0.3s;
+    border: 2px solid var(--accent-color);
 }
 
 .contact-links a:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 /* Footer */
 footer {
-    background-color: #111;
+    background-color: var(--secondary-color);
     text-align: center;
     padding: 20px 0;
 }
 
 footer p {
     color: #666;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Responsive Design */
@@ -351,7 +381,7 @@ footer p {
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: rgba(26, 26, 26, 0.9);
+        background-color: var(--secondary-color);
         width: 100%;
         text-align: center;
     }
