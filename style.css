@@ -147,6 +147,18 @@ section h2 {
     color: var(--text-color);
 }
 
+/* Γενικές Ρυθμίσεις */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
 /* About Section */
 .about-section {
     padding: 80px 20px;
@@ -172,12 +184,19 @@ section h2 {
 }
 
 .about-image img {
-    width: 200px; /* Προσαρμόστε το μέγεθος της εικόνας όπως θέλεις */
+    width: 200px;
     height: 200px;
-    border-radius: 50%; /* Για κυκλικό σχήμα */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ελαφριά σκιά για αισθητική */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     object-fit: cover;
 }
+
+/* Άλλα στυλ για τη σελίδα */
+.about-image img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 
 }
 
