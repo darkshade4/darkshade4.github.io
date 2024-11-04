@@ -1,75 +1,3 @@
-/* Γενικές Ρυθμίσεις */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-}
-
-/* Navbar */
-.navbar {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Hero Section */
-.hero-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 150px 20px;
-    background-image: url('image22.jpg'); /* Χρήση της εικόνας image22 ως φόντο */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay για καλύτερη αναγνωσιμότητα του κειμένου */
-    z-index: -1;
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.hero-text p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #ddd;
-}
-
-.hero-text .btn {
-    background-color: #0073e6;
-    color: #fff;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.hero-text .btn:hover {
-    background-color: #005bb5;
-}
-
 /* About Section */
 .about-section {
     padding: 80px 20px;
@@ -81,101 +9,26 @@ body {
     margin-bottom: 20px;
 }
 
-.about-section p {
-    max-width: 800px;
-    margin: 0 auto 40px;
-    font-size: 18px;
-}
-
-/* Στυλ για τη φωτογραφία στην ενότητα "Σχετικά με Εμένα" */
-.about-image {
+.about-content {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap; /* Για καλύτερη εμφάνιση σε μικρές οθόνες */
 }
 
 .about-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 150px; /* Μικρότερο μέγεθος εικόνας */
+    height: 150px;
+    border-radius: 50%; /* Στρογγυλό σχήμα */
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Projects Section */
-.projects-section {
-    padding: 80px 20px;
-    background-color: #f3f4f6;
-}
-
-.projects-section h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 80px 20px;
-}
-
-.contact-section h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.contact-section p {
-    text-align: center;
-    margin-bottom: 20px;
+.about-text {
+    max-width: 500px;
     font-size: 18px;
-}
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.contact-links a {
-    color: #333;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.contact-links a:hover {
-    color: #0073e6;
-}
-
-/* Footer */
-footer {
-    background-color: #f3f4f6;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    color: #666;
+    text-align: left;
 }
 
 
