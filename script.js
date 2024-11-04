@@ -1,7 +1,7 @@
-// JavaScript για την ανίχνευση της κύλισης και αλλαγή του φόντου και του navbar
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        document.body.classList.add('scrolled');
-    } else {
-        document.body.classList
+// Burger Menu Toggle
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
 
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
