@@ -1,60 +1,242 @@
-/* Βασικές Ρυθμίσεις Στυλ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
+/* Χρήση Google Font */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
     background-color: #f3f4f6;
-}
-
-/* Στυλ για το Κεντρικό Container */
-.container {
-    text-align: center;
-    max-width: 600px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Στυλ για τη Φωτογραφία Προφίλ */
-.profile-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-/* Στυλ για τα Projects */
-.projects h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
     color: #333;
 }
 
-.project {
+/* CSS Variables για ευκολία */
+:root {
+    --primary-color: #0073e6;
+    --secondary-color: #005bb5;
+    --light-color: #f3f4f6;
+    --dark-color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--light-color);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Burger Menu για κινητά */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px 50px;
+    margin-top: 60px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.hero-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px 20px;
+    background-color: var(--light-color);
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
     margin-bottom: 15px;
 }
 
-.project h3 {
+.project-card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.project-card .btn {
+    margin-top: auto;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 20px;
     font-size: 18px;
-    color: #555;
-    margin-bottom: 5px;
 }
 
-.project a {
-    font-size: 16px;
-    color: #0073e6;
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
     text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 18px;
 }
 
-.project a:hover {
-    text-decoration: underline;
+.social-links a:hover {
+    color: var(--primary-color);
 }
+
+/* Footer */
+footer {
+    background-color: var(--light-color);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content, .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
