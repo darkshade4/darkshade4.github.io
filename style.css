@@ -8,16 +8,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: #333;
-    background-color: #f0f0f0;
-}
-
-/* Χρωματική Παλέτα */
-:root {
-    --primary-color: #0073e6;
-    --secondary-color: #005bb5;
-    --accent-color: #ff6f61;
-    --background-color: #f0f0f0;
-    --text-color: #333;
 }
 
 /* Navbar */
@@ -27,56 +17,7 @@ body {
     top: 0;
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 1000;
-    backdrop-filter: blur(10px);
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-}
-
-.navbar .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.navbar .nav-links li {
-    margin-left: 20px;
-}
-
-.navbar .nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-links a:hover {
-    color: var(--primary-color);
-}
-
-/* Burger Menu */
-.burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background: var(--text-color);
-    margin: 4px;
-    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Section */
@@ -85,78 +26,48 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-image: url('hero-background.jpg');
+    padding: 150px 20px;
+    background-image: url('image22.jpg'); /* Χρήση της εικόνας image22 ως φόντο */
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: #fff;
+    text-align: center;
 }
 
-.hero-section .overlay {
+.hero-section::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay για καλύτερη αναγνωσιμότητα του κειμένου */
+    z-index: -1;
 }
 
-.hero-content {
-    position: relative;
-    text-align: center;
-    z-index: 1;
-}
-
-.hero-content h1 {
+.hero-text h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
-.hero-content h1 span {
-    color: var(--accent-color);
-}
-
-.hero-content p {
+.hero-text p {
     font-size: 20px;
     margin-bottom: 30px;
+    color: #ddd;
 }
 
-.hero-content .btn {
-    background-color: var(--primary-color);
+.hero-text .btn {
+    background-color: #0073e6;
     color: #fff;
-    padding: 15px 30px;
+    padding: 12px 20px;
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
-.hero-content .btn:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Sections */
-section {
-    padding: 80px 20px;
-}
-
-section h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: var(--text-color);
-}
-
-/* Γενικές Ρυθμίσεις */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
+.hero-text .btn:hover {
+    background-color: #005bb5;
 }
 
 /* About Section */
@@ -176,7 +87,7 @@ body {
     font-size: 18px;
 }
 
-/* Στυλ για τη φωτογραφία */
+/* Στυλ για τη φωτογραφία στην ενότητα "Σχετικά με Εμένα" */
 .about-image {
     display: flex;
     justify-content: center;
@@ -191,178 +102,80 @@ body {
     object-fit: cover;
 }
 
-/* Άλλα στυλ για τη σελίδα */
-.about-image img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-
-}
-
 /* Projects Section */
+.projects-section {
+    padding: 80px 20px;
+    background-color: #f3f4f6;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 .project-card {
     background-color: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
-
-.project-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-info {
     padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.project-info h3 {
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
     margin-bottom: 15px;
-    color: var(--text-color);
-}
-
-.project-info p {
-    margin-bottom: 20px;
-    color: #666;
-}
-
-.project-info .btn {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.project-info .btn:hover {
-    background-color: var(--secondary-color);
 }
 
 /* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
 .contact-section p {
     text-align: center;
+    margin-bottom: 20px;
     font-size: 18px;
-    margin-bottom: 40px;
-    color: var(--text-color);
 }
 
 .contact-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .contact-links a {
+    color: #333;
+    font-size: 24px;
     text-decoration: none;
-    color: var(--text-color);
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: color 0.3s ease;
 }
 
 .contact-links a:hover {
-    color: var(--primary-color);
-}
-
-.contact-links i {
-    font-size: 24px;
+    color: #0073e6;
 }
 
 /* Footer */
 footer {
-    background-color: #fff;
+    background-color: #f3f4f6;
     text-align: center;
     padding: 20px 0;
+}
+
+footer p {
     color: #666;
-    border-top: 1px solid #e0e0e0;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .navbar .nav-links {
-        position: absolute;
-        right: 0;
-        height: 100vh;
-        top: 60px;
-        background-color: rgba(255, 255, 255, 0.95);
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in-out;
-        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-    }
-
-    .navbar .nav-links.nav-active {
-        transform: translateX(0%);
-    }
-
-    .navbar .nav-links li {
-        opacity: 0;
-        margin: 20px 0;
-    }
-
-    .burger {
-        display: flex;
-    }
-}
-
-/* Animations */
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Burger Animation */
-.burger.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.burger.toggle .line2 {
-    opacity: 0;
-}
-
-.burger.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-
-
-/* Hero Section */
-.hero-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 20px;
-    background-image: url('image22.jpg'); /* Βεβαιώσου ότι το όνομα και η επέκταση είναι σωστά */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Για εφέ parallax */
-    color: #fff;
-    text-align: center;
-}
 
